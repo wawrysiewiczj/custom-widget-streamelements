@@ -1,0 +1,63 @@
+<!-- Main Widget Container -->
+<div id="widget-container" class="widget-position-top-left">
+  <!-- Logo Container (Always Visible) -->
+  <div id="logo-container">
+    <img id="logo" src="{{logo}}" alt="Logo" />
+  </div>
+
+  <!-- Alert State Container -->
+  <div id="alert-container" class="state-container">
+    <div class="alert-header">
+      <div class="badge" data-type="{{alertType}}">{{alertType}}</div>
+    </div>
+    <div class="alert-content">
+      <div class="name">{{name}}</div>
+      <div class="amount">x {{month}}</div>
+      <div class="divider"></div>
+      <div class="message">{{message}}</div>
+    </div>
+    <!-- Image container moved outside the alert-content -->
+    <div class="image-container">
+      <img id="alert-image" src="{{image}}" alt="Alert Image" />
+    </div>
+  </div>
+
+  <!-- Social Rotator Container -->
+  <div id="social-container" class="state-container">
+    <div class="social-content">
+      <div class="social-header">
+        <div class="badge">Napisz na czacie</div>
+        <div class="social-command">{{socialCommand}}</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sponsor Rotator Container -->
+  <div id="sponsor-container" class="state-container">
+    <div class="sponsor-content">
+      <div class="sponsor-header">
+        <div class="sponsor-name">{{sponsorName}}</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Event Rotator Container -->
+  <div id="event-container" class="state-container">
+    <div class="event-content">
+      <div class="event-header">
+        <div class="badge">Last sub</div>
+        <div class="name">{{lastSubName}}</div>
+        <div class="amount">x {{lastSubMonth}}</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Author Info (Hidden by default, shown if enabled) -->
+  <div id="author-info" class="{{showAuthorInfo ? 'visible' : 'hidden'}}">
+    Created by <span class="author-name">{{authorName}}</span>
+  </div>
+
+  <!-- Audio Element for Alert Sounds -->
+  <audio id="alert-sound" preload="auto"></audio>
+
+</div>
